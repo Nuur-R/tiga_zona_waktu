@@ -3,12 +3,7 @@ import 'package:tiga_zona_waktu/models/kuliner-model.dart';
 import 'package:tiga_zona_waktu/screen/detail-screen-kuliner.dart';
 import 'package:tiga_zona_waktu/screen/detail-screen-kuliner.dart';
 
-class MainScreenKuliner extends StatefulWidget {
-  @override
-  State<MainScreenKuliner> createState() => _MainScreenKulinerState();
-}
-
-class _MainScreenKulinerState extends State<MainScreenKuliner> {
+class MainScreenKuliner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
