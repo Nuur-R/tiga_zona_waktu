@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class WelcomeScreenSatwa extends StatelessWidget {
-  const WelcomeScreenSatwa({Key? key}) : super(key: key);
+class MainScreenSatwa extends StatelessWidget {
+  const MainScreenSatwa({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

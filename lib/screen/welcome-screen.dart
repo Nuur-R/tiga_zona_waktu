@@ -1,61 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:tiga_zona_waktu/screen/welcome-screen-kuliner.dart';
-import 'package:tiga_zona_waktu/screen/welcome-screen-lokasi.dart';
-import 'package:tiga_zona_waktu/screen/welcome-screen-satwa.dart';
+import 'package:tiga_zona_waktu/screen/main-screen.dart';
 
-class WelcomeScreen extends StatelessWidget {
+class welcomeScreen extends StatelessWidget {
+  const welcomeScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Center(
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => WelcomeScreenKuliner(),
-                      ),
-                    );
-                  },
-                  child: Image.asset('images/JelajahKuliner.png'),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => WelcomeScreenLokasi(),
-                      ),
-                    );
-                  },
-                  child: Image.asset('images/JelajahLokasi.png'),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => WelcomeScreenSatwa(),
-                      ),
-                    );
-                  },
-                  child: Image.asset('images/JelajahSatwa.png'),
-                ),
-              )
-            ],
+      body: Column(
+        children: [
+          Center(
+            child: Text('Welcome'),
           ),
-        ),
+          Image.asset('images/kuliner/bakso-1.png'),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pop(context);
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => MainScreen(),
+            ),
+          );
+        },
       ),
     );
   }
